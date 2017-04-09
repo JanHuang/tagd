@@ -1,4 +1,9 @@
 <?php
 
-route()->get(['/', 'name' => 'welcome'], 'IndexController@welcome');
-route()->get(['/hello/{name}', 'name' => 'hello'], 'IndexController@sayHello');
+route()->group('/api', function () {
+    route()->get('/tags', 'TagsController@select');
+    route()->get('/tags/{id}', 'TagsController@find');
+    route()->post('/tags', 'TagsController@create');
+    route()->patch('/tags/{id}', 'TagsController@patch');
+    route()->delete('/tags/{id}', 'TagsController@delete');
+});
