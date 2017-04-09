@@ -10,9 +10,9 @@
 return [
     'default' => [
         'adapter' => 'mysql',
-        'name' => 'ci',
+        'name' => 'fastd',
         'host' => '127.0.0.1',
-        'user' => 'travis',
+        'user' => 'root',
         'pass' => '',
         'charset' => 'utf8',
         'port' => 3306,
