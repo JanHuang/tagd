@@ -16,16 +16,6 @@ class IndexControllerTest extends TestCase
 {
     public function testSayHello()
     {
-        $request = $this->request('GET', '/');
-        $response = $this->app->handleRequest($request);
-//        $this->json($response, (['msg' => 'hello dobee']));
-        $this->isSuccessful($response);
-    }
 
-    public function testDynamic()
-    {
-        $request = $this->request('GET', '/hello/foo');
-        $response = $this->app->handleRequest($request);
-        $this->json($response, ['msg' => 'hello foo', ]);
     }
 }

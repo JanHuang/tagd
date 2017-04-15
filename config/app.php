@@ -27,13 +27,16 @@ return [
      * Application logger path
      */
     'log' => [
-        [\Monolog\Handler\StreamHandler::class, 'error.log',],
+        [\Monolog\Handler\StreamHandler::class, 'error.log', \Monolog\Logger::ERROR],
     ],
 
     /**
      * Bootstrap service.
      */
     'services' => [
+        \FastD\ServiceProvider\ConfigServiceProvider::class,
+        \FastD\ServiceProvider\RouteServiceProvider::class,
+        \FastD\ServiceProvider\LoggerServiceProvider::class,
         \FastD\ServiceProvider\DatabaseServiceProvider::class,
         \FastD\ServiceProvider\CacheServiceProvider::class,
     ],
