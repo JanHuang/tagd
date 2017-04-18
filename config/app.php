@@ -13,15 +13,20 @@ return [
      */
     'name' => 'dobee',
 
-    /**
-     * Application environment local/dev/prod
+    /*
+     * Exception handle
      */
-    'environment' => 'prod',
-
-    /**
-     * Application timezone
-     */
-    'timezone' => 'PRC',
+    'exception' => [
+        'handle' => function (Exception $e) {
+            return [
+                'msg' => $e->getMessage(),
+                'code' => $e->getCode(),
+                'file' => $e->getFile(),
+                'line' => $e->getLine(),
+                'trace' => explode("\n", $e->getTraceAsString()),
+            ];
+        },
+    ],
 
     /**
      * Application logger path
