@@ -39,7 +39,6 @@ return [
      * Bootstrap service.
      */
     'services' => [
-        \FastD\ServiceProvider\ConfigServiceProvider::class,
         \FastD\ServiceProvider\RouteServiceProvider::class,
         \FastD\ServiceProvider\LoggerServiceProvider::class,
         \FastD\ServiceProvider\DatabaseServiceProvider::class,

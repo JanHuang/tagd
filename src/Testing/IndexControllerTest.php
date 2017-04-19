@@ -9,7 +9,7 @@
 namespace Testing;
 
 
-use FastD\Test\TestCase;
+use FastD\TestCase;
 
 
 class IndexControllerTest extends TestCase
