@@ -3,6 +3,7 @@
 namespace Model;
 
 
+use FastD\Http\HttpException;
 use FastD\Model\Model;
 
 class TagsModel extends Model
@@ -20,11 +21,17 @@ class TagsModel extends Model
 
     public function find($id)
     {
-        return $this->db->get(static::TABLE, '*', [
+        $result = $this->db->get(static::TABLE, '*', [
             'OR' => [
                 'id' => $id,
             ]
         ]);
+
+        if (false === $result) {
+            throw new HttpException(sprintf('Tag %s cannot found', $id), 404);
+        }
+
+        return $result;
     }
 
     public function patch($id, array $data)
@@ -40,9 +47,9 @@ class TagsModel extends Model
 
     public function create(array $data)
     {
-        $id = $this->db->insert(static::TABLE, $data);
+        $this->db->insert(static::TABLE, $data);
 
-        return $this->find($id);
+        return $this->find($this->db->id());
     }
 
     public function delete($id)
