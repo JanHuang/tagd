@@ -25,7 +25,7 @@ class TagsController
 
     public function delete(ServerRequest $request)
     {
-        $post = model('tags')->delete($request->getAttribute('id'));
+        model('tags')->delete($request->getAttribute('id'));
 
         return json([], Response::HTTP_NO_CONTENT);
     }

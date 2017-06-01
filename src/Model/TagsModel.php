@@ -9,14 +9,26 @@ use FastD\Model\Model;
 class TagsModel extends Model
 {
     const TABLE = 'tags';
-    const LIMIT = '15';
 
-    public function select($page = 1)
+    public function select($page = 1, $limit = 15)
     {
-        $offset = ($page - 1) * static::LIMIT;
-        return $this->db->select(static::TABLE, '*', [
-            'LIMIT' => [$offset, static::LIMIT]
+        if ($limit <= 5) {
+            $limit = 5;
+        } else if ($limit >= 25) {
+            $limit = 25;
+        }
+
+        $offset = ($page - 1) * $limit;
+        $data = $this->db->select(static::TABLE, '*', [
+            'LIMIT' => [$offset, $limit]
         ]);
+
+        return [
+            'data' => $data,
+            'offset' => $offset,
+            'limit' => $limit,
+            'total' => $this->db->count(static::TABLE)
+        ];
     }
 
     public function find($id)
