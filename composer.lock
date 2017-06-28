@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "be65c7e5af05146114fec479ae475971",
+    "hash": "1a6aeb42fe5226ef356fd89a6f2770eb",
     "content-hash": "87cbf46759da57dcc278f9dc1d5d9ab1",
     "packages": [
         {
@@ -193,16 +193,16 @@
         },
         {
             "name": "fastd/fastd",
-            "version": "v3.1.5",
+            "version": "3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/fastD.git",
-                "reference": "90017eb2aa5f4dfabd6b6054e4bee20081649386"
+                "reference": "d82d302cec6b9fee151f431d90674cd97776a0b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/fastD/zipball/90017eb2aa5f4dfabd6b6054e4bee20081649386",
-                "reference": "90017eb2aa5f4dfabd6b6054e4bee20081649386",
+                "url": "https://api.github.com/repos/JanHuang/fastD/zipball/d82d302cec6b9fee151f431d90674cd97776a0b3",
+                "reference": "d82d302cec6b9fee151f431d90674cd97776a0b3",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -259,7 +259,7 @@
             "keywords": [
                 "FastD"
             ],
-            "time": "2017-06-13 11:15:03"
+            "time": "2017-06-26 11:07:17"
         },
         {
             "name": "fastd/http",
@@ -1370,7 +1370,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/myclabs/DeepCopy/8e6e04167378abf1ddb4d3522d8755c5fd90d102.zip",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8e6e04167378abf1ddb4d3522d8755c5fd90d102",
                 "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102",
                 "shasum": ""
             },
@@ -1621,7 +1621,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/php-code-coverage/ef7b2f56815df854e66ceaee8ebe9393ae36a40d.zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef7b2f56815df854e66ceaee8ebe9393ae36a40d",
                 "reference": "ef7b2f56815df854e66ceaee8ebe9393ae36a40d",
                 "shasum": ""
             },
@@ -2126,7 +2126,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/sebastianbergmann/diff/7f066a26a962dbe58ddea9f72a4e82874a3975a4.zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
                 "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
                 "shasum": ""
             },
